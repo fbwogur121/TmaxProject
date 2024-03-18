@@ -1,0 +1,37 @@
+<idea-plugin>
+    <id>com.example.TmaxProject</id>
+    <name>TmaxPlugin</name>
+    <version>1.0</version>
+    <change-notes> </change-notes>
+
+    <vendor email="jaehyeok_ryu2@tmaxsoft.co.kr" url="https://www.tmaxsoft.com/kr/main">티맥스소프트</vendor>
+    <description>
+        <![CDATA[<h3>Convert Dto,Entity Class To MyBatis Result Map</h3><br>
+                <p>Enter your Class File(Dto),  Mouse Right Click Generate Menu</p><br>
+                <p>You can see RefactorSelectedCodeGPT, ProduceGitCommitCommentsGPT ...</p><br>
+                <p>If Click RefactorSelectedCodeGPT, chatGPT will refactor your code that you selected</p><br>
+                <p>If Click ProduceGitCommitCommentsGPT, gpt will produce your commit comment</p><br>
+        ]]>
+    </description>
+
+    <depends>com.intellij.modules.java-capable</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+
+    </extensions>
+    <actions>
+        -->
+        <action id="RefactorSelectedCodeGPT" class="plugin.main.DtoToResultMap"
+                text="RefactorSelectedCodeGPT"
+                description="1">
+            <add-to-group group-id="GenerateGroup" anchor="first"/>
+        </action>
+
+        <action id="ProduceGitCommitCommentsGPT" class="plugin.main.DtoToResultMap"
+                text="ProduceGitCommitCommentsGPT"
+                description="10">
+            <add-to-group group-id="GenerateGroup" anchor="after"
+                          relative-to-action="DtoToResultMapOnlyOne"/>
+        </action>
+    </actions>
+</idea-plugin>
