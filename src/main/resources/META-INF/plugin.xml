@@ -4,7 +4,7 @@
     <version>1.0</version>
     <change-notes> </change-notes>
 
-    <vendor email="jaehyeok_ryu2@tmaxsoft.co.kr" url="https://www.tmaxsoft.com/kr/main">티맥스소프트</vendor>
+    <vendor email="jaehyeok_ryu2@tmaxsoft.co.kr" url="https://www.tmaxsoft.com/kr/main">TmaxSoft</vendor>
     <description>
         <![CDATA[<h3>Convert Dto,Entity Class To MyBatis Result Map</h3><br>
                 <p>Enter your Class File(Dto),  Mouse Right Click Generate Menu</p><br>
@@ -20,18 +20,11 @@
 
     </extensions>
     <actions>
-        -->
-        <action id="RefactorSelectedCodeGPT" class="plugin.main.DtoToResultMap"
+        <action id="RefactorSelectedCodeGPT" class="com.Tmax.CodeSummary.main.codeSummary"
                 text="RefactorSelectedCodeGPT"
-                description="1">
+                description="Refactor Selected Code with GPT">
             <add-to-group group-id="GenerateGroup" anchor="first"/>
         </action>
 
-        <action id="ProduceGitCommitCommentsGPT" class="plugin.main.DtoToResultMap"
-                text="ProduceGitCommitCommentsGPT"
-                description="10">
-            <add-to-group group-id="GenerateGroup" anchor="after"
-                          relative-to-action="DtoToResultMapOnlyOne"/>
-        </action>
     </actions>
 </idea-plugin>
